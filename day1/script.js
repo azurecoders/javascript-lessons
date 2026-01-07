@@ -60,7 +60,7 @@ console.log("The sum of a + b is: ", a + b);
 console.log("The sum of a - b is: ", a - b);
 console.log("The sum of a * b is: ", a * b);
 console.log("The sum of a / b is: ", a / b);
-console.log("The sum of a % b is: ", a % b); // This will print the remainder
+console.log("The sum of a % b is: ", a % b); // This will print the remainder (mod operator)
 
 // Comparison Operators
 console.log("A is Greater than B: ", a > b);
