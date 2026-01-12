@@ -52,6 +52,7 @@ const data = {
 };
 
 registration_form.addEventListener("submit", function (e) {
+  // Default Form of Behaviour is Reload
   e.preventDefault();
 });
 
@@ -74,6 +75,7 @@ submit_btn.addEventListener("click", function () {
     return;
   }
 
+  // Sample Database Example
   const databaseOfEmails = ["xyz@gmail.com", "abc@gmail.com"];
 
   if (!databaseOfEmails.includes(data.email)) {

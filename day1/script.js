@@ -30,6 +30,9 @@
 
 // Primitive Data Types
 // String => "hello world!" 'Hello World'
+
+// JavaScript has only number not float and integer separately
+
 // Integer => Number => 18 19 20 20000
 // Float => Number => 18.43 8.8 234.999 // Decimal Point Values
 // Boolean => True / False => true / false
