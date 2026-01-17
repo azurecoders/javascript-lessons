@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": "1039",
+      "name": "Muzammil Ahmed",
+      "email": "abc@gmail.com",
+      "password": "123456@M"
+    },
+    {
+      "id": "f196",
+      "name": "Ahmed",
+      "email": "xyz@gmail.com",
+      "password": "123456@M"
+    },
+    {
+      "id": "c7b4",
+      "name": "Shafaey",
+      "email": "shafaey@gmail.com",
+      "password": "123456@M"
+    },
+    {
+      "id": "d301",
+      "name": "Shafaey",
+      "email": "shafaey@gmail.com",
+      "password": "123456@M"
+    }
+  ]
+}
