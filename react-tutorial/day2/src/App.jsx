@@ -1,9 +1,11 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import CounterComponent from "./components/CounterComponent";
 import NamesDisplayComponent from "./components/NamesDisplayComponent";
 import LearningUseEffectHook from "./components/LearningUseEffectHook";
+import MessageWindow from "./components/MessageWindow";
+import MessageInput from "./components/MessageInput";
 
 const App = () => {
   console.log("I am running React JS");
@@ -14,6 +16,27 @@ const App = () => {
     loggedin_user_name: "Muzammil",
   };
 
+  // [
+  //   {
+  //     sender: "Muzammil",
+  //     message:"Hi Ahmed how are you?"
+  //   }
+  // ]
+
+  // Prop Drilling is for reading only
+
+  const [messages, setMessages] = useState([
+    {
+      sender: "Muzammil",
+      message: "Hi Ahmed how are you?",
+    },
+
+    {
+      sender: "Ahmed",
+      message: "Muzammil I am fine. What about you?",
+    },
+  ]);
+
   return (
     <Fragment>
       <div>
@@ -22,8 +45,7 @@ const App = () => {
 
         <h1>Hello How are you?</h1> */}
 
-        {/* <Navbar conI am running React JS
-￼App.jsx:9 I am running React JSfig={config} />
+        {/* <Navbar config={config} />
         <Hero config={config} /> */}
         {/* <h1>This is my page</h1> */}
 
@@ -32,6 +54,10 @@ const App = () => {
         {/* <NamesDisplayComponent /> */}
 
         <LearningUseEffectHook />
+        {/* <LearningUseEffectHook /> */}
+
+        {/* <MessageWindow messages={messages} />
+        <MessageInput setMessages={setMessages} /> */}
       </div>
     </Fragment>
   );
