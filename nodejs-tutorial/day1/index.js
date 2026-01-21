@@ -41,6 +41,8 @@ import todoRoutes from "./routes/todo.route.js";
 
 const app = express();
 
+const PORT = 3000;
+
 app.use(express.json()); // Parse JSON data into req.body
 app.use(express.urlencoded({ extended: true }));
 
@@ -55,6 +57,10 @@ app.get("/", (req, res) => {
 
 app.use("/todos", todoRoutes);
 
-app.listen(3002, () => {
-  console.log("Server is listening on PORT 3002");
+app.listen(PORT, () => {
+  console.log(`Server is listening on PORT ${PORT}`);
 });
+
+// localhost:3002/auth
+// localhost:3002/todos
+// localhost:3002/user
