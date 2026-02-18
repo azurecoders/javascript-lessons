@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Socket IO Chat Application</title>
+  </head>
+
+  <div style="margin-bottom: 10px">
+    <input id="roomInput" placeholder="Enter Room ID" />
+    <button id="roomJoinBtn">Join Room</button>
+  </div>
+
+  <div>
+    <input id="message" placeholder="Enter Your Message" />
+    <button id="submitBtn">Send Message</button>
+  </div>
+
+  <div id="messagesList"></div>
+
+  <body>
+    <!-- <script src="/socket.io/socket.io.js"></script> -->
+    <script>
+      // const client = io();
+
+      const roomInput = document.getElementById("roomInput");
+      const roomJoinBtn = document.getElementById("roomJoinBtn");
+
+      const messageInput = document.getElementById("message");
+      const submitBtn = document.getElementById("submitBtn");
+
+      const messagesList = document.getElementById("messagesList");
+
+      client.on("backend-message", (value) => {
+        const pElement = document.createElement("p");
+        pElement.innerText = value;
+        messagesList.appendChild(pElement);
+      });
+
+      roomJoinBtn.addEventListener("click", () => {
+        client.emit("join-room", roomInput.value);
+      });
+
+      submitBtn.addEventListener("click", () => {
+        const messageValue = messageInput.value;
+
+        client.emit("user-message", {
+          roomId: roomInput.value,
+          message: messageValue,
+        });
+      });
+    </script>
+  </body>
+</html>
